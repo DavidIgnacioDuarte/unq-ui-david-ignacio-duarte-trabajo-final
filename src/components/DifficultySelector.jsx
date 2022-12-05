@@ -19,13 +19,13 @@ const DifficultySelector = () => {
         <h1>
             Choose a difficulty to start!
         </h1>
-        <ButtonGroup vertical>
+        <div className="d-grid gap-3 mb-3">
       { difficulties?.map((difficulty) => (
-          <Button key={difficulty} variant="outline-light" size="lg">
+          <Button key={difficulty} variant="outline-dark" size="lg">
               {difficulty.toUpperCase()}
           </Button>
        ))}
-        </ButtonGroup>
+        </div>
     </div>
   )
 
