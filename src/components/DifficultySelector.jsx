@@ -1,11 +1,12 @@
 import { API } from "../services/Api";
 import React, { useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
-import { ButtonGroup } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const DifficultySelector = () => {
 
   const [difficulties, setDifficulties] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     API.getDifficulties()
@@ -21,7 +22,11 @@ const DifficultySelector = () => {
         </h1>
         <div className="d-grid gap-3 mb-3">
       { difficulties?.map((difficulty) => (
-          <Button key={difficulty} variant="outline-dark" size="lg">
+          <Button key={difficulty} variant="outline-dark" size="lg"
+            onClick={() =>
+                navigate(
+                  difficulty ? `/trivia?difficulty=${difficulty}` : "/trivia"
+                )}>
               {difficulty.toUpperCase()}
           </Button>
        ))}

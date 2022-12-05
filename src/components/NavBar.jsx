@@ -11,7 +11,7 @@ const NavBar = () => {
         background: `url(${"nav.png"})`
       }}
       className="d-flex align-items-center justify-content-between px-1 py-1">
-      <a href="/home">
+      <a href="/">
         <img width="50px" src="iconHome.png" title="Back to home?"/>
       </a>
         <h2>My Trivia Crack</h2>

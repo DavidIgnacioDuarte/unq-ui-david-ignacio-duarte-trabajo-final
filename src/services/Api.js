@@ -12,8 +12,8 @@ export const API = {
         return axiosInstance.get("difficulty");
     },
     getQuestions(difficulty) {
-        const selected = (difficulty) ? "?difficulty=" + difficulty : "";
-        return axiosInstance.get("questions" + selected);
+        const selected = (difficulty) ? difficulty : "easy";
+        return axiosInstance.get("questions?difficulty=" + selected);
     },
     sendAnswer(questionId, option) {
         return axiosInstance.post("/api/answer", { questionId, option })

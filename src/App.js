@@ -1,12 +1,25 @@
 import './App.css';
-import DifficultySelector from './components/DifficultySelector';
-import NavBar from './components/NavBar';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/views/Home";
+import Trivia from "./components/views/Trivia";
 
 function App() {
   return (
     <>
-    <NavBar/>
-      <DifficultySelector/>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+                <Home/>
+            }/>
+          <Route
+            path="/trivia"
+            element={
+                <Trivia/>
+            }/>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
