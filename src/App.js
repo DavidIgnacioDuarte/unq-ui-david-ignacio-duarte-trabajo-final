@@ -1,26 +1,18 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/views/Home";
-import Trivia from "./components/views/Trivia";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Trivia from "./components/Trivia";
+import DifficultySelector from './components/DifficultySelector';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
-    <>
       <BrowserRouter>
+        <NavBar/>
         <Routes>
-          <Route
-            path="/"
-            element={
-                <Home/>
-            }/>
-          <Route
-            path="/trivia"
-            element={
-                <Trivia/>
-            }/>
+          <Route path="/" element={<DifficultySelector/>}/>
+          <Route exact path="/trivia" element={<Trivia/>}/>
         </Routes>
       </BrowserRouter>
-    </>
   );
 }
 

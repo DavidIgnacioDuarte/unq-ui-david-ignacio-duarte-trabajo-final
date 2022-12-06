@@ -25,7 +25,7 @@ const DifficultySelector = () => {
           <Button key={difficulty} variant="outline-dark" size="lg"
             onClick={() =>
                 navigate(
-                  difficulty ? `/trivia?difficulty=${difficulty}` : "/trivia"
+                  `/trivia?difficulty=${difficulty}`
                 )}>
               {difficulty.toUpperCase()}
           </Button>

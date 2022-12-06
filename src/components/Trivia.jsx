@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { API } from "../../services/Api";
+import { API } from "../services/Api";
 
 const Trivia = () => {
 
