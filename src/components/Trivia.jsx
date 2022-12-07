@@ -58,10 +58,6 @@ const Trivia = () => {
     return (answerId === correctAnswer) ? "success" : "danger";
   }
 
-  if (finished) {
-    console.log("Hola terminó el juego :P")
-  }
-
   return (
     <div className="d-flex flex-column gap-4 align-items-center">
         <h2>

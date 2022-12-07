@@ -14,15 +14,15 @@ A quick trivia game for play while you drink ☕ or 🧉
 
 We should to run locally this project, following the next steps:
 
-1. **Clone** this repository or **download** the code 
+1. **Clone** or **download** this repository
 
-2. Located at the beginning of the code, run next commands in CLI in order:
+2. Located at the beginning of the local repository, run next commands in CLI in order:
 
 ```
 npm install
 npm start
 ```
 
-3. After the above, open the link of `localhost` showed in terminal with any browser.
+3. Open the link of `localhost` showed in terminal with any browser.
 
 4. Enjoy!
