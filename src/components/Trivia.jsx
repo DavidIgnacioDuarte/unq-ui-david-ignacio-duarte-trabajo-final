@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { API } from "../services/Api";
 import Counter from "./Counter";
 import { AiFillFire, AiOutlineArrowRight } from "react-icons/ai";

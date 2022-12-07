@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { MdHelp } from "react-icons/md";
+import HelpOffCanva from "./HelpOffCanva";
 
 const NavBar = () => {
 
+  const [help, showHelp] = useState(false)
+
+  const handleClose = () => showHelp(false);
+  const handleShow = () => showHelp(true);
+
   return (
+    <>
     <header
       style={{
         borderBottom: "2px solid lightgray",
@@ -16,10 +23,18 @@ const NavBar = () => {
       </a>
         <h2>My Trivia Crack</h2>
           <Button
-            variant="outline-light" size="sm">
+            variant="outline-light" size="sm" title="More information!"
+            onClick={
+              handleShow
+            }>
             <MdHelp size={25}/>
           </Button>
     </header>
+    
+    <HelpOffCanva show={help} onHide={handleClose} />
+    
+    </>
+
   );
 };
 

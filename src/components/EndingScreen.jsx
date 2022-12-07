@@ -1,6 +1,5 @@
-import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
-import { AiOutlineCheckCircle, AiTwotoneTrophy } from "react-icons/ai";
+import { AiTwotoneTrophy } from "react-icons/ai";
 import { BsEmojiWink } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
