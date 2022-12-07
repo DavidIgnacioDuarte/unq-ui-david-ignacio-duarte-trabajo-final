@@ -16,6 +16,6 @@ export const API = {
         return axiosInstance.get("questions?difficulty=" + selected);
     },
     sendAnswer(questionId, option) {
-        return axiosInstance.post("/api/answer", { questionId, option })
-    },
+        return axiosInstance.post("/answer", { questionId, option });
+    }
 };
